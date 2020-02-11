@@ -626,28 +626,28 @@ console.log('--------------------------------58---------------------------------
 ///----------------------------------------1
 let arrayOfNum3 = [1, 2, 3, 4, 5];
 let resultOfSum3 = 0;
-for(let value of arrayOfNum3){
-   resultOfSum3 += value;
+for (let value of arrayOfNum3) {
+  resultOfSum3 += value;
 }
 console.log(resultOfSum3)
 ///----------------------------------------2
 let arrayOfNum4 = [1, 2, 3, 4, 5];
 let resultOfSum4 = 0;
-for(let key in arrayOfNum3){
-   resultOfSum4 += arrayOfNum4[key];
+for (let key in arrayOfNum3) {
+  resultOfSum4 += arrayOfNum4[key];
 }
 console.log(resultOfSum4)
 ///----------------------------------------3
 let arrayOfNum5 = [1, 2, 3, 4, 5];
 let resultOfSum5 = 0;
-for(let i = 0; i < arrayOfNum5.length; i++){
-   resultOfSum5 += arrayOfNum5[i];
+for (let i = 0; i < arrayOfNum5.length; i++) {
+  resultOfSum5 += arrayOfNum5[i];
 }
 console.log(resultOfSum5)
 ///----------------------------------------4
 let arrayOfNum6 = [1, 2, 3, 4, 5];
 let resultOfSum6 = 0;
-arrayOfNum6.forEach( item => resultOfSum6 += item )
+arrayOfNum6.forEach(item => resultOfSum6 += item)
 console.log(resultOfSum6)
 ///----------------------------------------5
 let arrayOfNum7 = [1, 2, 3, 4, 5];
@@ -655,20 +655,20 @@ let resultOfSum7 = arrayOfNum7.reduce((a, b) => a + b)
 console.log(resultOfSum7)
 ///----------------------------------------6
 let arrayOfNum8 = [1, 2, 3, 4, 5];
-function arraySum(array){
-let sum8 = 0;
-for(let i = 0; i < array.length; i++){
+function arraySum(array) {
+  let sum8 = 0;
+  for (let i = 0; i < array.length; i++) {
     sum8 += array[i];
-    }
-console.log(sum8);
+  }
+  console.log(sum8);
 }
 arraySum(arrayOfNum8);
 
 //59. Дан объект obj. С помощью цикла for-in выведите на экран ключи и элементы этого объекта.
 
 console.log('--------------------------------59--------------------------------------')
-let obj2 = {green: 'зеленый', red: 'красный', blue: 'голубой'}
-for ( let key in obj2){
+let obj2 = { green: 'зеленый', red: 'красный', blue: 'голубой' }
+for (let key in obj2) {
   console.log(`${key} : ${obj2[key]}`)
 }
 
@@ -676,40 +676,40 @@ for ( let key in obj2){
 
 console.log('--------------------------------60--------------------------------------')
 let obj3 = {
-  Коля : '200',
-  Вася : '300',
-  Петя : '400',
+  Коля: '200',
+  Вася: '300',
+  Петя: '400',
 }
-for ( let key in obj3){
+for (let key in obj3) {
   console.log(`${key} - зарплата ${obj3[key]} долларов`)
 }
 
 //61. Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощью цикла for и оператора if выведите на экран столбец тех элементов массива, которые больше 3-х, но меньше 10.
 console.log('--------------------------------61 --------------------------------------')
 let array3 = [2, 5, 9, 15, 0, 4];
-for ( let value of array3){
-  if (value > 3 && value < 10){
+for (let value of array3) {
+  if (value > 3 && value < 10) {
     console.log(value)
   }
 }
 //--------------------------------------
 
 let array4 = [2, 5, 9, 15, 0, 4];
-for ( let key in array4){
-  if( array4[key] > 3 && array4[key]< 10){
+for (let key in array4) {
+  if (array4[key] > 3 && array4[key] < 10) {
     console.log(array4[key])
   }
 }
 //-----------------------
 let array5 = [2, 5, 9, 15, 0, 4];
-for ( let i = 0; i < array5.length; i++){
-  if (array5[i] > 3 && array5[i] < 10){
-console.log(array5[i])
+for (let i = 0; i < array5.length; i++) {
+  if (array5[i] > 3 && array5[i] < 10) {
+    console.log(array5[i])
   }
-} 
+}
 //-------------------------------
 let array6 = [2, 5, 9, 15, 0, 4];
-let result6 = array6.filter( item => item > 3 && item < 10)
+let result6 = array6.filter(item => item > 3 && item < 10)
 console.log(result6)
 
 
@@ -718,15 +718,15 @@ console.log('--------------------------------62---------------------------------
 let array7 = [1, 2, 6, -4, -7, 3];
 let someResult = 0;
 let newArray7 = array7.filter(item => item > 0)
-for (let value of newArray7){
+for (let value of newArray7) {
   someResult += value
 }
 console.log(someResult)
 //------------------------------------------------
 let array8 = [1, 2, 6, -4, -7, 3];
 let someResult8 = 0;
-for(let key in array8){
-  if (array8[key] > 0){
+for (let key in array8) {
+  if (array8[key] > 0) {
     someResult8 += array8[key]
   }
 }
@@ -736,9 +736,28 @@ console.log(someResult8)
 
 console.log('--------------------------------63--------------------------------------')
 let elArray = [1, 2, 5, 9, 4, 13, 4, 10];
-for (let value of elArray){
-  if (value === 4){
+for (let value of elArray) {
+  if (value === 4) {
     console.log('Yes!')
   }
 }
 
+//64.  Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
+
+console.log('--------------------------------64--------------------------------------')
+let numArray = [10, 20, 30, 50, 235, 3000]
+for (let value of numArray) {
+  if (String(value)[0] === '1' || String(value)[0] === '2' || String(value)[0] === '5') {
+    console.log(+String(value))
+  }
+}
+
+//65.  Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью цикла for создайте строку '-1-2-3-4-5-6-7-8-9-'.
+
+console.log('--------------------------------65--------------------------------------')
+let strArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let str02 = '-'
+for (let value of strArray) {
+  str02 += value + '-'
+}
+console.log(str02)
