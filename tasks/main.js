@@ -761,3 +761,24 @@ for (let value of strArray) {
   str02 += value + '-'
 }
 console.log(str02)
+
+//66. Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
+
+const daysOfWeek = [
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
+  'Воскресенье'
+];
+
+for (let i = 0; i < daysOfWeek.length; i++) {
+  if (i === 5 || i === 6) {
+    document.write(`<strong>${daysOfWeek[i]}</strong></br>`)
+  } else if(i !== 5 || i !== 6) {
+  document.write(`${daysOfWeek[i]}</br>`);
+  }
+}
+
